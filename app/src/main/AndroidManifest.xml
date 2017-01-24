@@ -29,8 +29,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <meta-data android:name="org.themoviedb.apikey" android:value="${THEMOVIEDB_APIKEY}" />
     </application>
 
 </manifest>

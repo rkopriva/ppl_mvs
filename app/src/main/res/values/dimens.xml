@@ -3,4 +3,17 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="title_padding">10dp</dimen>
+    <dimen name="plot_margin_top">10dp</dimen>
+    <!-- Texts -->
+    <dimen name="title_text_size">30sp</dimen>
+    <dimen name="original_title_text_size">22sp</dimen>
+    <dimen name="plot_text_size">16sp</dimen>
+    <dimen name="movie_rating_text_size">18sp</dimen>
+    <dimen name="movie_year_text_size">24sp</dimen>
+    <dimen name="detail_activity_content_padding">20dp</dimen>
+    <dimen name="detail_activity_poster_width">120dp</dimen>
+    <dimen name="detail_activity_poster_margin">5dp</dimen>
+    <dimen name="grid_column_width">150dp</dimen>
+    <dimen name="details_layout_margin_start">10dp</dimen>
 </resources>

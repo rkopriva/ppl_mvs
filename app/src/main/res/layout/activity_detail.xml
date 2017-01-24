@@ -1,103 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.udacity.koprivarudolf.popularmovies.DetailActivity">
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="5dp"
-            app:layout_collapseMode="pin"
-            android:textColor="@color/colorTitleText"
-            android:background="@color/colorTitleBackground"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorTitleBackground" />
 
         <TextView
             android:id="@+id/original_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="5dp"
-            app:layout_collapseMode="pin"
+            android:textSize="@dimen/original_title_text_size"
+            android:textStyle="italic"
+            android:padding="@dimen/title_padding"
+            tools:text="Original Title"
             android:textColor="@color/colorTitleText"
             android:background="@color/colorTitleBackground"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/content_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.udacity.koprivarudolf.popularmovies.DetailActivity"
         tools:showIn="@layout/activity_detail">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/detail_activity_content_padding"
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.udacity.koprivarudolf.popularmovies.ProportionalImageView
+                    android:layout_width="@dimen/detail_activity_poster_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/detail_activity_poster_margin"
+                    android:id="@+id/movie_poster_image"/>
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/details_layout_margin_start"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.udacity.koprivarudolf.popularmovies.ProportionalImageView
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:id="@+id/movie_poster_image"/>
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_marginLeft="10dp"
+                    <TextView
+                        android:id="@+id/movie_year"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/movie_year"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorMovieDetailText"
-                            android:textSize="24dp"
-                            android:layout_toRightOf="@id/movie_poster_image"
-                            android:text="2015"/>
-                        <TextView
-                            android:id="@+id/movie_rating"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="8.1/10"/>
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorMovieDetailText"
+                        android:textSize="@dimen/movie_year_text_size"
+                        tools:text="2015"/>
+                    <TextView
+                        android:id="@+id/movie_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/movie_rating_text_size"
+                        tools:text="8.1/10"/>
                 </LinearLayout>
-                <TextView
-                    android:id="@+id/movie_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorMovieDetailText"
-                    android:textSize="16dp"
-                    android:text="about"/>
             </LinearLayout>
-    </ScrollView>
+            <TextView
+                android:id="@+id/movie_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/plot_margin_top"
+                android:textColor="@color/colorMovieDetailText"
+                android:textSize="@dimen/plot_text_size"
+                tools:text="plot"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 </android.support.design.widget.CoordinatorLayout>

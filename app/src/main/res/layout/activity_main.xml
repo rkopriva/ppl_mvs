@@ -28,7 +28,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:columnWidth="150dp"
+        android:columnWidth="@dimen/grid_column_width"
         android:numColumns="auto_fit"
         android:verticalSpacing="0dp"
         android:horizontalSpacing="0dp"

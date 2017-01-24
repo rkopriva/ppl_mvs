@@ -23,7 +23,6 @@ public class DetailActivity extends AppCompatActivity {
     /**
      * Views from the layout
      */
-    private TextView titleView;
     private TextView originalTitleView;
     private ImageView moviePosterImageView;
     private TextView movieYearView;
@@ -44,9 +43,8 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         MovieListResultObject movieDetails = intent.getParcelableExtra(DetailActivity.PARCEL_DATA_MOVIE_DETAILS);
 
-        //Title view (localized)
-        titleView = (TextView) findViewById(R.id.title);
-        titleView.setText(movieDetails.getTitle());
+        //Title (localized)
+        setTitle(movieDetails.getTitle());
 
         //Original view. Is displayed when it differs from the title
         originalTitleView = (TextView) findViewById(R.id.original_title);

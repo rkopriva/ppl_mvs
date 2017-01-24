@@ -1,4 +1,4 @@
 #Project 1
 
 #Configuration
-Open the app/build.gradle and replace [YOUR API KEY] with your API key
+Add themoviedb API key into the gradle.properties (Global) as THEMOVIEDB_APIKEY="[YOUR API KEY]"

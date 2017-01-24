@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         TOPRATED
     }
 
-    private static String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
     //Constant used to save/restore list of movies
     private static final String PARCEL_DATA_MOVIES = "PARCEL_DATA_MOVIES";
     //Constant used to save/restore type of list
@@ -73,19 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (movieDBService == null) {
             //Read API key and check if it was configured
-            String apiKey = null;
-            try {
-                ApplicationInfo ai = getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
-                Bundle bundle = ai.metaData;
-                apiKey = bundle.getString(Constants.MOVIE_DB_API_KEY_METADATA);
-                //Here I'm checking if reviewer configured the API key in bundle.gradle
-                if (apiKey.equals("[YOUR API KEY]")) {
-                    throw new RuntimeException("Please setup the THEMOVIEDB_APIKEY in bundle.gradle");
-                }
-            } catch (PackageManager.NameNotFoundException e) {
-                throw new RuntimeException("Please add " + Constants.MOVIE_DB_API_KEY_METADATA + " metadata into the application's manifest");
-            } catch (NullPointerException e) {
-                throw new RuntimeException("Please add " + Constants.MOVIE_DB_API_KEY_METADATA + " metadata into the application's manifest");
+            String apiKey = BuildConfig.THEMOVIEDB_APIKEY;
+            //Here I'm checking if reviewer configured the API key in bundle.gradle
+            if (apiKey.equals("[YOUR API KEY]")) {
+                throw new RuntimeException("Please setup the THEMOVIEDB_APIKEY in gradle.properties");
             }
 
             //Add interceptor to append api_key and locale for each request
