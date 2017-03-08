@@ -173,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 while (favoriteMoviesCursor.moveToNext()) {
                     movieListResultModels.add(MovieListResultModel.fromCursor(favoriteMoviesCursor));
                 }
+                favoriteMoviesCursor.close();
                 popularMovieAdapter.notifyDataSetChanged();
                 if (movieListResultModels.size() == 0) {
                     Toast.makeText(this, R.string.no_favorite_movies, Toast.LENGTH_LONG).show();
