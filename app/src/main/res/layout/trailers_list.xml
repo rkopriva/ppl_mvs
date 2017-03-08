@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/trailers_header"
+        android:text="@string/trailers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Trailers:"
+        android:textSize="@dimen/header_text" />
+
+    <ProgressBar
+        android:id="@+id/trailers_progress"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/loading_progress_size"
+        android:layout_height="@dimen/loading_progress_size" />
+
+    <ImageView
+        android:id="@+id/trailers_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/error_icon_size"
+        android:layout_height="@dimen/error_icon_size"
+        android:contentDescription="@string/error_loading_trailers"
+        android:src="@drawable/ic_warning_black_32dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/trailers_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+</LinearLayout>

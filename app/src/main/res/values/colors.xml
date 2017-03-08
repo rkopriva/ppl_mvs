@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#444444</color>
+    <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTitleText">#FFFFFF</color>
-    <color name="colorTitleBackground">#009688</color>
-    <color name="colorMovieDetailText">#009688</color>
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="separator">#333333</color>
+    <color name="colorAuthorName">#333388</color>
 </resources>

@@ -29,6 +29,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+        <provider
+            android:authorities="com.udacity.koprivarudolf.popularmovies.store.MoviesProvider"
+            android:name="com.udacity.koprivarudolf.popularmovies.store.generated.MoviesProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>

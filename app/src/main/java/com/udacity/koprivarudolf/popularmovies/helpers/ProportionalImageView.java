@@ -1,4 +1,4 @@
-package com.udacity.koprivarudolf.popularmovies;
+package com.udacity.koprivarudolf.popularmovies.helpers;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

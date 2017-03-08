@@ -10,4 +10,18 @@
     <string name="error_reason_connection">Connection error</string>
     <string name="error_reason_unknown">Unknown error</string>
     <string name="error_loading_movies">Error while loading list of movies</string>
+    <string name="mark_as_favorite">Mark as favorite</string>
+    <string name="trailers">Trailers:</string>
+    <string name="reviews">Reviews:</string>
+    <string name="error_loading_trailers">Error while loading list of trailers</string>
+    <string name="error_loading_reviews">Error while loading reviews</string>
+    <string name="no_trailers">Movie has no trailers</string>
+    <string name="no_reviews">Movie has no reviews</string>
+    <string name="site_not_supported">Site is not supported</string>
+    <string name="remove_from_favorites">Remove from favorites</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="no_favorite_movies">There are no favorite movies</string>
+    <string name="play">Play trailer</string>
+    <string name="cancel">Cancel</string>
 </resources>

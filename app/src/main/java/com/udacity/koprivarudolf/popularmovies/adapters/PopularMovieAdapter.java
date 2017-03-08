@@ -1,4 +1,4 @@
-package com.udacity.koprivarudolf.popularmovies;
+package com.udacity.koprivarudolf.popularmovies.adapters;
 
 /**
  * Created by rudolfkopriva on 21.01.17.
@@ -13,10 +13,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+import com.udacity.koprivarudolf.popularmovies.R;
+import com.udacity.koprivarudolf.popularmovies.models.MovieListResultModel;
 
 import java.util.List;
 
-public class PopularMovieAdapter extends ArrayAdapter<MovieListResultObject> {
+public class PopularMovieAdapter extends ArrayAdapter<MovieListResultModel> {
     private static final String LOG_TAG = PopularMovieAdapter.class.getSimpleName();
 
     static class ViewHolder{
@@ -32,10 +34,10 @@ public class PopularMovieAdapter extends ArrayAdapter<MovieListResultObject> {
      * to populate into the lists
      *
      * @param context        The current context. Used to inflate the layout file.
-     * @param movieListResultObjects A List of MovieListResultObject objects to display in a list
+     * @param movieListResultModels A List of MovieListResultModel objects to display in a list
      */
-    public PopularMovieAdapter(Activity context, List<MovieListResultObject> movieListResultObjects) {
-        super(context, 0, movieListResultObjects);
+    public PopularMovieAdapter(Activity context, List<MovieListResultModel> movieListResultModels) {
+        super(context, 0, movieListResultModels);
     }
 
     /**
@@ -48,8 +50,8 @@ public class PopularMovieAdapter extends ArrayAdapter<MovieListResultObject> {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Gets the MovieListResultObject object from the ArrayAdapter at the appropriate position
-        MovieListResultObject movieListResultObject = getItem(position);
+        // Gets the MovieListResultModel object from the ArrayAdapter at the appropriate position
+        MovieListResultModel movieListResultModel = getItem(position);
 
         ViewHolder viewHolder;
 
@@ -66,7 +68,7 @@ public class PopularMovieAdapter extends ArrayAdapter<MovieListResultObject> {
 
         //Used Picasso to load images
         Picasso.with(getContext())
-                .load(movieListResultObject.getPosterImageURL())
+                .load(movieListResultModel.getPosterImageURL())
                 .into(viewHolder.iconView);
 
         return convertView;

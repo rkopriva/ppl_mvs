@@ -16,4 +16,16 @@
     <dimen name="detail_activity_poster_margin">5dp</dimen>
     <dimen name="grid_column_width">150dp</dimen>
     <dimen name="details_layout_margin_start">10dp</dimen>
+    <dimen name="mark_button_padding">5dp</dimen>
+    <dimen name="favorite_button_text_size">12sp</dimen>
+    <dimen name="separator_margin">5dp</dimen>
+    <dimen name="header_text">18sp</dimen>
+    <dimen name="trailer_icon_padding">3dp</dimen>
+    <dimen name="loading_progress_size">32dp</dimen>
+    <dimen name="review_author_margin_top">10dp</dimen>
+    <dimen name="review_content_padding_left">5dp</dimen>
+    <dimen name="review_author_margin_bottom">10dp</dimen>
+    <dimen name="movie_detail_image_width">120dp</dimen>
+    <dimen name="movie_detail_image_height">181dp</dimen>
+    <dimen name="error_icon_size">32dp</dimen>
 </resources>
